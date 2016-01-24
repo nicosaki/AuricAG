@@ -51,7 +51,6 @@ body {
 }
 
 
-/* Sticky footer styles
 -------------------------------------------------- */
 html {
   position: relative;
@@ -125,12 +124,16 @@ a:visited, a:active {
     background-color: #eee;
     background-color: rgba(238, 238, 238, 0.9);
 }
+
 .strain {
   color: white;
   font-weight: bold;
   size: 10em;
   text-align: center;
 }
+
+
+
 
 a.btn-primary {
     color: #fff;
@@ -159,10 +162,12 @@ border: none;
 
 .retailers {
     list-style: none;
+<<<<<<< HEAD
     font-size: 1em;
     padding: 10px;
     text-decoration: none;
 }
+
 
 
 a:hover {
