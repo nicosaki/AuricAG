@@ -2,6 +2,11 @@
 /* ==========================================================================
    AuricAG
    ========================================================================== */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
 body {
     background: #3d4144 url('../img/bg.jpg') no-repeat center top;
@@ -24,6 +29,65 @@ body {
     text-transform: uppercase;
 }
 
+.wrapper {
+  color: gold;
+  size: 2.5em
+  text-decoration: strong;
+  text-shadow: 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000;
+  width: 87%;
+  max-width: 900px;
+  margin: 0 auto;
+  overflow:hidden;
+  border: 1px solid grey;
+}
+
+.item {
+  height:250px;
+  width:25%;
+  float:left;
+  background-position: left top;
+  transition:width 0.5s ease;
+}
+
+.wrapper:hover .item {
+  width:10%;
+  transition:width 0.5s ease;
+}
+
+.wrapper .item:hover{
+  width:70%;
+  transition:width 0.5s ease;
+  size: 4em;
+}
+
+.one {
+    background-image:url(http://auricag.com/SSSSDH.jpg);
+}
+.two {
+  background-image:url(http://auricag.com/DutchTreat3.jpg);
+}
+
+.three {
+  background-image:url(http://auricag.com/MauiTai.jpg);
+}
+
+.four {
+  background-image:url(http://auricag.com/SnoopsDream2.jpg);
+}
+
+
+.catch {
+  position:relative;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  z-index:1;
+}
+
+.catch:hover ~ .item {
+  width:25%;
+}
 
 #gallery {
   margin: 0;
