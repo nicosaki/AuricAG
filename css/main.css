@@ -5,6 +5,8 @@
    ========================================================================== */
 
  * {
+   margin: 0;
+   padding: 0;
    -webkit-box-sizing: border-box;
    -moz-box-sizing: border-box;
    box-sizing: border-box;
@@ -58,14 +60,33 @@ body {
 
 .wrapper {
   color: gold;
-  size: 2.5em
+  text: 2.5em;
   text-decoration: strong;
   text-shadow: 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000;
   width: 87%;
   max-width: 900px;
-  margin: 0 auto;
+  margin: 0 auto 20px;
   overflow:hidden;
+  position: relative;
   border: 1px solid grey;
+}
+
+a.divLink {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-decoration: none;
+    /* Makes sure the link doesn't get underlined */
+    z-index: 10;
+    /* raises anchor tag above everything else in div */
+    background-color: white;
+    /*workaround to make clickable in IE */
+    opacity: 0;
+    /*workaround to make clickable in IE */
+    filter: alpha(opacity=0);
+    /*workaround to make clickable in IE */
 }
 
 .item {
@@ -74,34 +95,65 @@ body {
   float:left;
   background-position: left top;
   transition:width 0.5s ease;
+  position: relative;
+  z-index: 2;
 }
 
 .wrapper:hover .item {
   width:10%;
   transition:width 0.5s ease;
+  cursor: hand;
+  opacity: .9;
 }
 
 .wrapper .item:hover{
   width:70%;
   transition:width 0.5s ease;
-  size: 4em;
 }
 
 .one {
-    background-image:url(http://auricag.com/SSSSDH.jpg);
+    background-image:url(../img/SSSSDH.jpg);
 }
 .two {
-  background-image:url(http://auricag.com/DutchTreat3.jpg);
+  background-image:url(../img/DutchTreat3.jpg);
 }
 
 .three {
-  background-image:url(http://auricag.com/MauiTai.jpg);
+  background-image:url(../img/MauiWowie3.jpg);
 }
 
 .four {
-  background-image:url(http://auricag.com/SnoopsDream2.jpg);
+  background-image:url(../img/SnoopsDream2.jpg);
 }
 
+.five {
+  background-image:url(../img/AK47.jpg);
+}
+
+.six {
+  background-image:url(../img/MauiTai.jpg);
+}
+
+.seven {
+  background-image:url(../img/RippedBubba.jpg);
+}
+
+.eight {
+  background-image:url(../img/Skunk1.jpg);
+}
+
+.catch {
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  z-index:0;
+}
+
+.catch:hover ~ .item {
+  width:25%;
+}
 
 .container {
   width: auto;
@@ -225,7 +277,37 @@ border: none;
   text-align: center;
 }
 
+.image {
+   position: relative;
+   position: center;
+   width: 100%; /* for IE 6 */
+   height: 275px;
+   overflow: hidden;
+   border-radius: 1;
+   margin-bottom: 20px;
+}
 
+h3 {
+   position: absolute;
+   top: 200px;
+   left: 0;
+   width: 100%;
+}
+
+h3 span {
+   color: white;
+   font: bold 24px/45px Helvetica, Sans-Serif;
+   letter-spacing: -1px;
+   background: rgb(0, 0, 0); /* fallback color */
+   background: rgba(0, 0, 0, 0.7);
+   padding: 10px;
+}
+
+.reviews {
+  color: black;
+  size: 1.25em;
+  text-decoration: none;
+}
 
 @media (max-width: 768px) {
     .logo {

@@ -35,6 +35,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li class="active"><a href="contact.html">Contact</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
                 <li><a href="locations.html">Locations</a></li>
               </ul>
 
