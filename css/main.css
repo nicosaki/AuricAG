@@ -60,7 +60,6 @@ body {
 
 .wrapper {
   color: gold;
-  text: 2.5em;
   text-decoration: strong;
   text-shadow: 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000;
   width: 87%;
@@ -104,6 +103,7 @@ a.divLink {
   transition:width 0.5s ease;
   cursor: hand;
   opacity: .9;
+  size: 2em;
 }
 
 .wrapper .item:hover{
